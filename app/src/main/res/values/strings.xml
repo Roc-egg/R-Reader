@@ -1,3 +1,69 @@
 <resources>
-    <string name="app_name">R-Reader</string>
+    <string name="app_name">R-阅</string>
+    <string name="action_share">分享</string>
+    <string name="actionbar_search">搜索</string>
+    <string name="actionbar_more">更多信息</string>
+    <string name="actionbar_webview_share">分享到</string>
+    <string name="actionbar_webview_cope">复制链接</string>
+    <string name="actionbar_webview_open">打开链接</string>
+
+    <!--项目布局文件引用的字符串-->
+    <string name="no_name">佚名</string>
+    <string name="string_rating">评分：</string>
+    <string name="string_rating_num">人评分</string>
+    <string name="string_type">类型：</string>
+    <string name="string_publisher">出版社：</string>
+    <string name="string_joke">------</string>
+    <string name="no_name_joke">匿名用户</string>
+
+    <string name="picture_has_save_to">已保存至 %s</string>
+
+
+    <!--问题归纳-->
+    <string name="string_url_faq">http://jingbin.me/2016/12/25/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E4%BA%91%E9%98%85/</string>
+    <!--干货闲读-->
+    <string name="string_url_xiandu">https://gank.io/xiandu</string>
+    <!--玩安卓-->
+    <string name="string_url_wanandroid">http://www.wanandroid.com/index</string>
+    <!--每日推荐-->
+    <string name="string_url_trending">https://github.com/trending</string>
+
+    <!--url-->
+    <string name="string_url_cloudreader">https://github.com/youlookwhat/CloudReader</string>
+
+
+    <string name="string_about">由于网易云音乐用了很久，特别喜爱它的界面风格，所以仿写了它的UI。如构成侵权请及时通知我修改或删除。
+        \n\n 大部分数据使用的是鸿洋的玩安卓、代码家的干货集中营和豆瓣APIV2.0，一切数据解释权都归鸿洋、代码家和豆瓣所有。
+        \n\n 干货每日推荐每天12：30更新，如没有内容则取缓存。电影热映榜每日零点更新。
+        \n\n 整体采用Retrofit+RxJava+MvvM-DataBinding框架。
+        \n\n 我的GitHub：https://github.com/youlookwhat
+        \n\n 项目完全开源，如果你觉得不错，请帮忙Star一下吧，或帮忙分享给你的朋友，这是给我们最大的动力与支持，非常感谢！
+        </string>
+
+    <string name="string_about_me">
+        Blog: http://jingbin.me
+        \nEmail: jingbin127@163.com
+    </string>
+
+    <string name="string_lib">
+          xrecyclerview
+        \n zoomlibrary
+        \n com.android.support:appcompat-v7:27.1.1
+        \n com.android.support:design:27.1.1
+        \n com.android.support:cardview-v7:27.1.1
+        \n com.squareup.retrofit2:retrofit:2.4.0
+        \n io.reactivex:rxandroid:1.2.0
+        \n com.nineoldandroids:library:2.4.0
+        \n jp.wasabeef:glide-transformations:2.0.1
+        \n com.youth.banner:banner:1.4.10
+        \n com.daimajia.slider:library:1.1.5@aar
+        \n com.cocosw:bottomsheet:1.3.1@aar
+        \n com.google.zxing:core:3.3.0
+        \n android.arch.persistence.room:runtime
+        \n com.squareup.leakcanary:leakcanary-android
+        \n com.tencent.bugly:crashreport
+    </string>
+
+    <string name="string_share_text">发现了一个高仿网易云音乐的App，里面有大量IT干货，每天提供安卓，IOS等最新资讯，还有最新电影热映榜和大量书籍信息，大力推荐哦~：https://fir.im/cloudreader</string>
+
 </resources>
