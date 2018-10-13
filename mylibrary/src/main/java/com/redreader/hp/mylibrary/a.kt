@@ -1,4 +1,4 @@
-package com.redreader.hp.mylibrary;
+package com.redreader.hp.mylibrary
 
 /**
  * 类名：    R-Reader
@@ -9,5 +9,4 @@ package com.redreader.hp.mylibrary;
  * 修改时间：2018/10/14/014 2:47
  * 修改备注：
  */
-public class a {
-}
+class a
