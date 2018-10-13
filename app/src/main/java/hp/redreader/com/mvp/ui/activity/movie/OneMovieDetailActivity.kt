@@ -18,7 +18,6 @@ import hp.redreader.com.mvp.presenter.OneMovieDetailPresenter
 
 import hp.redreader.com.R
 import hp.redreader.com.app.base.BaseHeaderActivity
-import hp.redreader.com.app.base.a
 import hp.redreader.com.app.utils.StringFormatUtil
 import hp.redreader.com.app.utils.showBookImg
 import hp.redreader.com.app.utils.showImgBg
