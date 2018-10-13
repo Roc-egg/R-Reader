@@ -17,15 +17,13 @@ import hp.redreader.com.mvp.presenter.BookDetailPresenter
 
 import hp.redreader.com.R
 import hp.redreader.com.app.base.BaseHeaderActivity
-import hp.redreader.com.app.base.MyBaseHeaderActivity
+import hp.redreader.com.app.base.a
 import hp.redreader.com.app.utils.StringFormatUtil
 import hp.redreader.com.app.utils.showBookImg
 import hp.redreader.com.app.utils.showImgBg
 import hp.redreader.com.mvp.model.entity.book.BookBean
 import hp.redreader.com.mvp.model.entity.book.BookDetailBean
 import hp.redreader.com.mvp.ui.activity.webview.WebViewActivity
-import kotlinx.android.synthetic.main.activity_book_detail.view.*
-import kotlinx.android.synthetic.main.header_book_detail.view.*
 
 
 /**
@@ -37,7 +35,7 @@ import kotlinx.android.synthetic.main.header_book_detail.view.*
  * 修改时间：2018/9/24/024 0:47
  * 修改备注：
  */
-class BookDetailActivity : MyBaseHeaderActivity<BookDetailPresenter>(), BookDetailContract.View {
+class BookDetailActivity : BaseHeaderActivity<BookDetailPresenter>(), BookDetailContract.View {
     private var booksBean: BookBean.BooksBean? = null
     private var mBookDetailUrl: String? = null
     private var mBookDetailName: String? = null

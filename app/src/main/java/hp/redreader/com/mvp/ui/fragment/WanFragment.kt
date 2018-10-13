@@ -17,12 +17,10 @@ import hp.redreader.com.mvp.contract.WanContract
 import hp.redreader.com.mvp.presenter.WanPresenter
 
 import hp.redreader.com.R
-import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.mvp.ui.adapter.MyFragmentPagerAdapter
 import hp.redreader.com.mvp.ui.fragment.wanChild.BannerFragment
 import hp.redreader.com.mvp.ui.fragment.wanChild.BookListFragment
 import hp.redreader.com.mvp.ui.fragment.wanChild.JokeFragment
-import kotlinx.android.synthetic.main.fragment_wan.view.*
 import java.util.ArrayList
 
 

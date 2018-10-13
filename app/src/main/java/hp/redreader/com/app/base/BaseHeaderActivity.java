@@ -62,7 +62,7 @@ import static com.jess.arms.utils.ThirdViewUtil.convertAutoView;
  * 修改时间：2018/9/23/023 21:41
  * 修改备注：
  */
-public abstract class MyBaseHeaderActivity<P extends IPresenter> extends AppCompatActivity implements IActivity, ActivityLifecycleable {
+public abstract class BaseHeaderActivity<P extends IPresenter> extends AppCompatActivity implements IActivity, ActivityLifecycleable {
     protected final String TAG = this.getClass().getSimpleName();
     private final BehaviorSubject<ActivityEvent> mLifecycleSubject = BehaviorSubject.create();
     private Cache<String, Object> mCache;

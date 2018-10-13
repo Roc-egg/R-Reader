@@ -16,7 +16,6 @@ import hp.redreader.com.mvp.presenter.DoubanTopPresenter
 
 import hp.redreader.com.R
 import hp.redreader.com.app.base.MyBaseActivity
-import hp.redreader.com.app.base.MyBasesActivity
 import hp.redreader.com.mvp.ui.adapter.DouBanTopAdapter
 import kotlinx.android.synthetic.main.activity_douban_top.view.*
 import timber.log.Timber
@@ -32,7 +31,7 @@ import javax.inject.Inject
  * 修改时间：2018/9/25/025 23:49
  * 修改备注：
  */
-class DoubanTopActivity : MyBasesActivity<DoubanTopPresenter>(), DoubanTopContract.View {
+class DoubanTopActivity : MyBaseActivity<DoubanTopPresenter>(), DoubanTopContract.View {
 
     @Inject
     lateinit var mLayoutManager: StaggeredGridLayoutManager

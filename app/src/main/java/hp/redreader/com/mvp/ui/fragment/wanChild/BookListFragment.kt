@@ -19,9 +19,7 @@ import hp.redreader.com.di.module.BookListModule
 import hp.redreader.com.mvp.contract.BookListContract
 import hp.redreader.com.mvp.presenter.BookListPresenter
 
-import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.mvp.ui.adapter.WanBookAdapter
-import kotlinx.android.synthetic.main.fragment_banner.view.*
 import kotlinx.android.synthetic.main.header_item_book.view.*
 import timber.log.Timber
 import javax.inject.Inject

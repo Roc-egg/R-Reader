@@ -2,7 +2,6 @@ package hp.redreader.com.app.base
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Color
 import android.graphics.drawable.AnimationDrawable
 import android.graphics.drawable.Drawable
 import android.os.Build
@@ -48,9 +47,6 @@ import hp.redreader.com.mvp.ui.widegt.CustomChangeBounds
 import hp.redreader.com.mvp.ui.widegt.MyNestedScrollView
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.Subject
-import me.jessyan.progressmanager.ProgressListener
-import me.jessyan.progressmanager.ProgressManager
-import me.jessyan.progressmanager.body.ProgressInfo
 import timber.log.Timber
 
 import com.jess.arms.utils.ThirdViewUtil.convertAutoView
@@ -64,7 +60,7 @@ import com.jess.arms.utils.ThirdViewUtil.convertAutoView
  * 修改时间：2018/9/23/023 21:41
  * 修改备注：
  */
-abstract class BaseHeaderActivity<P : IPresenter> : AppCompatActivity(), IActivity, ActivityLifecycleable {
+abstract class a<P : IPresenter> : AppCompatActivity(), IActivity, ActivityLifecycleable {
     protected val TAG = this.javaClass.simpleName
     private val mLifecycleSubject = BehaviorSubject.create<ActivityEvent>()
     private var mCache: Cache<String, Any>? = null
@@ -245,7 +241,7 @@ abstract class BaseHeaderActivity<P : IPresenter> : AppCompatActivity(), IActivi
     /**
      * 设置头部header布局 左侧的图片(需要设置曲线路径切换动画时重写)
      */
-    protected open fun setHeaderPicView(): ImageView {
+    protected fun setHeaderPicView(): ImageView {
         return ImageView(this)
     }
 
@@ -266,7 +262,7 @@ abstract class BaseHeaderActivity<P : IPresenter> : AppCompatActivity(), IActivi
     /**
      * 3. toolbar 单击"更多信息"
      */
-    protected open fun setTitleClickMore() {}
+    protected fun setTitleClickMore() {}
 
     /**
      * 设置自定义 Shared Element切换动画
@@ -495,7 +491,7 @@ abstract class BaseHeaderActivity<P : IPresenter> : AppCompatActivity(), IActivi
     /**
      * 失败后点击刷新
      */
-    protected open fun onRefresh() {
+    protected fun onRefresh() {
 
     }
 

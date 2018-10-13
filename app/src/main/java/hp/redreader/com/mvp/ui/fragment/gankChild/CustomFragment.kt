@@ -2,15 +2,12 @@ package hp.redreader.com.mvp.ui.fragment.gankChild
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Message
-import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.blankj.utilcode.util.SPUtils
-import com.blankj.utilcode.util.ToastUtils
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.cocosw.bottomsheet.BottomSheet
 import com.example.xrecyclerview.XRecyclerView
@@ -24,12 +21,10 @@ import hp.redreader.com.mvp.contract.CustomContract
 import hp.redreader.com.mvp.presenter.CustomPresenter
 
 import hp.redreader.com.R
-import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.mvp.model.api.Constants.GANK_CALA
 import hp.redreader.com.mvp.model.entity.gank.GankIoDataBean
 import hp.redreader.com.mvp.ui.activity.webview.WebViewActivity
 import hp.redreader.com.mvp.ui.adapter.GankAndroidAdapter
-import kotlinx.android.synthetic.main.fragment_custom.view.*
 import org.simple.eventbus.Subscriber
 import timber.log.Timber
 import javax.inject.Inject

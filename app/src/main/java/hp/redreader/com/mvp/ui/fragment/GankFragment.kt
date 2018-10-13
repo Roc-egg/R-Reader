@@ -17,13 +17,11 @@ import hp.redreader.com.mvp.contract.GankContract
 import hp.redreader.com.mvp.presenter.GankPresenter
 
 import hp.redreader.com.R
-import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.mvp.ui.adapter.MyFragmentPagerAdapter
 import hp.redreader.com.mvp.ui.fragment.gankChild.AndroidFragment
 import hp.redreader.com.mvp.ui.fragment.gankChild.CustomFragment
 import hp.redreader.com.mvp.ui.fragment.gankChild.EverydayFragment
 import hp.redreader.com.mvp.ui.fragment.gankChild.WelfareFragment
-import kotlinx.android.synthetic.main.fragment_gank.view.*
 import org.simple.eventbus.Subscriber
 import java.util.ArrayList
 

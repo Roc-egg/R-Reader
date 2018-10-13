@@ -18,11 +18,9 @@ import hp.redreader.com.mvp.contract.JokeContract
 import hp.redreader.com.mvp.presenter.JokePresenter
 
 import hp.redreader.com.R
-import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.app.utils.dialog.showItems
 import hp.redreader.com.mvp.model.entity.wanandroid.DuanZiBean
 import hp.redreader.com.mvp.ui.adapter.JokeAdapter
-import kotlinx.android.synthetic.main.fragment_banner.view.*
 import timber.log.Timber
 import javax.inject.Inject
 

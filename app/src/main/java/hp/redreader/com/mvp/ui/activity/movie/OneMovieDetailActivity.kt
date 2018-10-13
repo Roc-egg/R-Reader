@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.widget.LinearLayoutManager
-import android.view.ViewGroup
 import android.widget.ImageView
-import com.chad.library.adapter.base.BaseQuickAdapter
 
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.utils.ArmsUtils
@@ -20,7 +18,7 @@ import hp.redreader.com.mvp.presenter.OneMovieDetailPresenter
 
 import hp.redreader.com.R
 import hp.redreader.com.app.base.BaseHeaderActivity
-import hp.redreader.com.app.base.MyBaseHeaderActivity
+import hp.redreader.com.app.base.a
 import hp.redreader.com.app.utils.StringFormatUtil
 import hp.redreader.com.app.utils.showBookImg
 import hp.redreader.com.app.utils.showImgBg
@@ -29,8 +27,6 @@ import hp.redreader.com.mvp.model.entity.movie.PersonBean
 import hp.redreader.com.mvp.model.entity.movie.SubjectsBean
 import hp.redreader.com.mvp.ui.activity.webview.WebViewActivity
 import hp.redreader.com.mvp.ui.adapter.MovieDetailAdapter
-import kotlinx.android.synthetic.main.activity_one_movie_detail.view.*
-import kotlinx.android.synthetic.main.header_slide_shape.view.*
 import javax.inject.Inject
 
 
@@ -43,7 +39,7 @@ import javax.inject.Inject
  * 修改时间：2018/9/26/026 0:46
  * 修改备注：
  */
-class OneMovieDetailActivity : MyBaseHeaderActivity<OneMovieDetailPresenter>(), OneMovieDetailContract.View {
+class OneMovieDetailActivity : BaseHeaderActivity<OneMovieDetailPresenter>(), OneMovieDetailContract.View {
     @Inject
     lateinit var mAdapter: MovieDetailAdapter
     @Inject

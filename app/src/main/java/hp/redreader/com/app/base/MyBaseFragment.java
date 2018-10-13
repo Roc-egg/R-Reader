@@ -27,7 +27,6 @@ import hp.redreader.com.R;
 import hp.redreader.com.app.utils.PerfectClickListener;
 import io.reactivex.subjects.BehaviorSubject;
 import io.reactivex.subjects.Subject;
-import timber.log.Timber;
 
 /**
  * 类名：    MyBaseFragment
