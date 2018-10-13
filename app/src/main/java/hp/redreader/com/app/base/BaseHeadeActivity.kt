@@ -64,7 +64,7 @@ import timber.log.Timber
  * 修改时间：2018/9/23/023 21:41
  * 修改备注：
  */
-class BaseHeadeActivity : AppCompatActivity() {
+open class BaseHeadeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         Timber.e("测试")
