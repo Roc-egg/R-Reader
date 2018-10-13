@@ -1,33 +1,114 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'kotlin-kapt'
+kapt {
+    generateStubs = true
+}
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         applicationId "hp.redreader.com"
-        minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
     }
     buildTypes {
-        release {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
     }
 }
 
+
+greendao {
+    schemaVersion 1  //数据库schema版本号，迁移等操作会用到
+    daoPackage 'hp.redreader.com.greendao' // 通过gradle插件生成的数据库相关文件的包名，默认为你的entity所在的包名
+    targetGenDir 'src/main/java' //自定义生成数据库文件的目录
+}
+
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(path: ':xrecyclerview')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //support
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation(rootProject.ext.dependencies["cardview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    //test
+    testImplementation rootProject.ext.dependencies["junit"]
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    releaseImplementation rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+
+    //tools
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    kapt rootProject.ext.dependencies["dagger2-compiler"]
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation rootProject.ext.dependencies["lifecyclemodel"]
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    //MvpArms()
+    implementation 'me.jessyan:arms:2.4.1'
+    implementation rootProject.ext.dependencies["anko"]
+    //底部导航栏
+    implementation rootProject.ext.dependencies["bottom-navigation-bar"]
+//    //沉侵式
+//    implementation rootProject.ext.dependencies["systembar"]
+//    //RecyclerView下拉上拉
+//    implementation rootProject.ext.dependencies["EasyRefreshLayout"]
+    //BaseRecyclerViewAdapterHelper(https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
+    implementation rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    //轮播图（https://github.com/youth5201314/banner）
+    implementation rootProject.ext.dependencies["banner"]
+    //lottie动画（https://github.com/airbnb/lottie-android）
+    implementation rootProject.ext.dependencies["lottie"]
+    //今日头条屏幕适配方案(AndroidAutoSize(https://github.com/JessYanCoding/AndroidAutoSize/blob/master/README-zh.md)
+    implementation rootProject.ext.dependencies["AndroidAutoSize"]
+    //AndroidUtilCode工具包(https://github.com/Blankj/AndroidUtilCode)
+    implementation rootProject.ext.dependencies["AndroidUtilCode"]
+
+    // GreenDao
+    implementation rootProject.ext.dependencies["greendao"]
+    //photoview
+    implementation rootProject.ext.dependencies["PhotoView"]
+    //BottomSheet
+    implementation rootProject.ext.dependencies["BottomSheet"]
 }
