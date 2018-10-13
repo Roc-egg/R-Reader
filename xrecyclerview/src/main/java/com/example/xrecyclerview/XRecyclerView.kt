@@ -199,7 +199,7 @@ class XRecyclerView  constructor(context: Context, attrs: AttributeSet? = null, 
                     && lastVisibleItemPosition >= layoutManager.itemCount - 1
                     && layoutManager.itemCount > layoutManager.childCount
                     && !isnomore
-                    && mRefreshHeader!!.state < YunRefreshHeader.STATE_REFRESHING) {
+                    && mRefreshHeader!!.state < BaseRefreshHeader.STATE_REFRESHING) {
 
                 val footView = mFootViews.get(0)
                 isLoadingData = true
@@ -230,7 +230,7 @@ class XRecyclerView  constructor(context: Context, attrs: AttributeSet? = null, 
                 mLastY = ev.rawY
                 if (isOnTop && pullRefreshEnabled) {
                     mRefreshHeader!!.onMove(deltaY / DRAG_RATE)
-                    if (mRefreshHeader!!.visiableHeight > 0 && mRefreshHeader!!.state < YunRefreshHeader.STATE_REFRESHING) {
+                    if (mRefreshHeader!!.visiableHeight > 0 && mRefreshHeader!!.state < BaseRefreshHeader.STATE_REFRESHING) {
                         return false
                     }
                 }

@@ -35,8 +35,8 @@ class YunRefreshHeader constructor(private val mContext: Context, attrs: Attribu
                     }
                     msg!!.setText(R.string.listview_header_hint_release)
                 }
-                BaseRefreshHeader.Companion.STATE_REFRESHING -> msg!!.setText(R.string.refreshing)
-                BaseRefreshHeader.Companion.STATE_DONE -> msg!!.setText(R.string.refresh_done)
+                BaseRefreshHeader.STATE_REFRESHING -> msg!!.setText(R.string.refreshing)
+                BaseRefreshHeader.STATE_DONE -> msg!!.setText(R.string.refresh_done)
             }
             field = state
         }
@@ -97,17 +97,17 @@ class YunRefreshHeader constructor(private val mContext: Context, attrs: Attribu
         // not visible.
             isOnRefresh = false
 
-        if (visiableHeight > mMeasuredHeight && state < BaseRefreshHeader.Companion.STATE_REFRESHING) {
-            state = BaseRefreshHeader.Companion.STATE_REFRESHING
+        if (visiableHeight > mMeasuredHeight && state < BaseRefreshHeader.STATE_REFRESHING) {
+            state = BaseRefreshHeader.STATE_REFRESHING
             isOnRefresh = true
         }
         // refreshing and header isn't shown fully. do nothing.
-        if (state == BaseRefreshHeader.Companion.STATE_REFRESHING && height <= mMeasuredHeight) {
+        if (state == BaseRefreshHeader.STATE_REFRESHING && height <= mMeasuredHeight) {
             //return;
         }
         var destHeight = 0 // default: scroll back to dismiss header.
         // is refreshing, just scroll back to show all the header.
-        if (state == BaseRefreshHeader.Companion.STATE_REFRESHING) {
+        if (state == BaseRefreshHeader.STATE_REFRESHING) {
             destHeight = mMeasuredHeight
         }
         smoothScrollTo(destHeight)

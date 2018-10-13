@@ -10,7 +10,7 @@ import android.view.ViewGroup
 /**
  * Created by yangcai on 2016/1/28.
  */
-class WrapAdapter(private val mHeaderViews: SparseArray<View>, private val mFootViews: SparseArray<View>, private val adapter: RecyclerView.Adapter<*>?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class WrapAdapter(private val mHeaderViews: SparseArray<View>, private val mFootViews: SparseArray<View>, private val adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var headerPosition = 1
 
