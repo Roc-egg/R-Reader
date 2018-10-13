@@ -56,9 +56,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage" />
         <activity
-            android:name=".mvp.ui.activity.TestActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".mvp.ui.activity.webview.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity
