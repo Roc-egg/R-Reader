@@ -103,7 +103,7 @@ public class XRecyclerView extends RecyclerView {
          */
 //        if (previousTotal <= getLayoutManager().getItemCount()) {
             if (footView instanceof LoadingMoreFooter) {
-                ((LoadingMoreFooter) footView).setState(LoadingMoreFooter.STATE_COMPLETE);
+                ((LoadingMoreFooter) footView).setState(LoadingMoreFooter.Companion.getSTATE_COMPLETE());
             } else {
                 footView.setVisibility(View.GONE);
             }
@@ -124,7 +124,7 @@ public class XRecyclerView extends RecyclerView {
         final View footView = mFootViews.get(0);
         isnomore = true;
         if (footView instanceof LoadingMoreFooter) {
-            ((LoadingMoreFooter) footView).setState(LoadingMoreFooter.STATE_NOMORE);
+            ((LoadingMoreFooter) footView).setState(LoadingMoreFooter.Companion.getSTATE_NOMORE());
         } else {
             footView.setVisibility(View.GONE);
         }
@@ -176,7 +176,7 @@ public class XRecyclerView extends RecyclerView {
                 isLoadingData = true;
                 if (footView != null) {
                     if (footView instanceof LoadingMoreFooter) {
-                        ((LoadingMoreFooter) footView).setState(LoadingMoreFooter.STATE_LOADING);
+                        ((LoadingMoreFooter) footView).setState(LoadingMoreFooter.Companion.getSTATE_LOADING());
                     } else {
                         footView.setVisibility(View.VISIBLE);
                     }
