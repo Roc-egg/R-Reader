@@ -54,7 +54,7 @@ import com.jess.arms.utils.ThirdViewUtil.convertAutoView
 /**
  * 两个没用的文件为了github上面显示一下kotlin
  */
-abstract class a<P : IPresenter> : AppCompatActivity(), IActivity, ActivityLifecycleable {
+abstract class b<P : IPresenter> : AppCompatActivity(), IActivity, ActivityLifecycleable {
     protected val TAG = this.javaClass.simpleName
     private val mLifecycleSubject = BehaviorSubject.create<ActivityEvent>()
     private var mCache: Cache<String, Any>? = null
@@ -142,6 +142,37 @@ abstract class a<P : IPresenter> : AppCompatActivity(), IActivity, ActivityLifec
 
     override fun setContentView(@LayoutRes layoutResID: Int) {
 
+
+
+        loadingView = (findViewById<View>(R.id.vs_loading) as ViewStub).inflate()
+        refresh = (getView<View>(R.id.vs_error_refresh) as ViewStub).inflate()
+        refresh!!.visibility = View.GONE
+
+        val img = loadingView!!.findViewById<ImageView>(R.id.img_progress)
+
+        // 加载动画
+        mAnimationDrawable = img.drawable as AnimationDrawable
+        // 默认进入页面就开启动画
+        if (!mAnimationDrawable!!.isRunning) {
+            mAnimationDrawable!!.start()
+        }
+
+        // 设置自定义元素共享切换动画
+        //        setMotion(setHeaderPicView(), false);
+
+        // 初始化滑动渐变
+        //        initSlideShapeTheme(setHeaderImgUrl(), setHeaderImageView());
+
+        // 设置toolbar
+        setToolBar()
+
+        // 点击加载失败布局
+        refresh!!.setOnClickListener(object : PerfectClickListener() {
+            override fun onNoDoubleClick(v: View) {
+                showLoadings()
+                onRefresh()
+            }
+        })
     }
 
     /**
