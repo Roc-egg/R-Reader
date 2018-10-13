@@ -59,8 +59,6 @@ abstract class a<P : IPresenter> : AppCompatActivity(), IActivity, ActivityLifec
     private val mLifecycleSubject = BehaviorSubject.create<ActivityEvent>()
     private var mCache: Cache<String, Any>? = null
 
-    @Inject
-    protected var mPresenter: P? = null//如果当前页面逻辑简单, Presenter 可以为 null
 
     // 加载中
     private var loadingView: View? = null
@@ -409,9 +407,6 @@ abstract class a<P : IPresenter> : AppCompatActivity(), IActivity, ActivityLifec
 
     override fun onDestroy() {
         super.onDestroy()
-        if (mPresenter != null)
-            mPresenter!!.onDestroy()//释放资源
-        this.mPresenter = null
 
         if (changeBounds != null) {
             changeBounds!!.removeListener(null)
