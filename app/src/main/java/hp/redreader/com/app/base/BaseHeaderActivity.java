@@ -2,6 +2,7 @@ package hp.redreader.com.app.base;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -49,6 +50,9 @@ import hp.redreader.com.mvp.ui.widegt.CustomChangeBounds;
 import hp.redreader.com.mvp.ui.widegt.MyNestedScrollView;
 import io.reactivex.subjects.BehaviorSubject;
 import io.reactivex.subjects.Subject;
+import me.jessyan.progressmanager.ProgressListener;
+import me.jessyan.progressmanager.ProgressManager;
+import me.jessyan.progressmanager.body.ProgressInfo;
 import timber.log.Timber;
 
 import static com.jess.arms.utils.ThirdViewUtil.convertAutoView;
@@ -62,7 +66,7 @@ import static com.jess.arms.utils.ThirdViewUtil.convertAutoView;
  * 修改时间：2018/9/23/023 21:41
  * 修改备注：
  */
-public abstract class MyBaseHeaderActivity<P extends IPresenter> extends AppCompatActivity implements IActivity, ActivityLifecycleable {
+public abstract class BaseHeaderActivity<P extends IPresenter> extends AppCompatActivity implements IActivity, ActivityLifecycleable {
     protected final String TAG = this.getClass().getSimpleName();
     private final BehaviorSubject<ActivityEvent> mLifecycleSubject = BehaviorSubject.create();
     private Cache<String, Object> mCache;
