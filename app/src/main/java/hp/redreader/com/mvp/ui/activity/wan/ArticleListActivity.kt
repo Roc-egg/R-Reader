@@ -14,6 +14,7 @@ import com.jess.arms.utils.ArmsUtils
 
 import hp.redreader.com.R
 import hp.redreader.com.app.base.MyBaseActivity
+import hp.redreader.com.app.base.MyBasesActivity
 import hp.redreader.com.di.component.DaggerBannerComponent
 import hp.redreader.com.di.module.BannerModule
 import hp.redreader.com.mvp.contract.BannerContract
@@ -38,7 +39,7 @@ import javax.inject.Inject
  * 修改时间：2018/9/20/020 15:12
  * 修改备注：
  */
-class ArticleListActivity : MyBaseActivity<BannerPresenter>(), BannerContract.View, BaseQuickAdapter.OnItemClickListener {
+class ArticleListActivity : MyBasesActivity<BannerPresenter>(), BannerContract.View, BaseQuickAdapter.OnItemClickListener {
     @Inject
     lateinit var mAdapter: WanAndroidAdapter
 

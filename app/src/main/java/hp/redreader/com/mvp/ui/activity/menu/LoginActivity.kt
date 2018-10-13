@@ -14,6 +14,7 @@ import hp.redreader.com.mvp.presenter.LoginPresenter
 
 import hp.redreader.com.R
 import hp.redreader.com.app.base.MyBaseActivity
+import hp.redreader.com.app.base.MyBasesActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 
@@ -26,7 +27,7 @@ import kotlinx.android.synthetic.main.activity_login.*
  * 修改时间：2018/9/20/020 15:20
  * 修改备注：
  */
-class LoginActivity : MyBaseActivity<LoginPresenter>(), LoginContract.View {
+class LoginActivity : MyBasesActivity<LoginPresenter>(), LoginContract.View {
 
     override fun setupActivityComponent(appComponent: AppComponent) {
         DaggerLoginComponent //如找不到该类,请编译一下项目
