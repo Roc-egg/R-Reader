@@ -24,12 +24,15 @@ import hp.redreader.com.mvp.contract.BannerContract
 import hp.redreader.com.mvp.presenter.BannerPresenter
 
 import hp.redreader.com.R
+import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.app.utils.displayRandom
 import hp.redreader.com.mvp.model.entity.data.User
 import hp.redreader.com.mvp.model.entity.wanandroid.HomeListBean
 import hp.redreader.com.mvp.model.entity.wanandroid.WanAndroidBannerBean
 import hp.redreader.com.mvp.ui.activity.webview.WebViewActivity
 import hp.redreader.com.mvp.ui.adapter.WanAndroidAdapter
+import kotlinx.android.synthetic.main.fragment_banner.view.*
+import kotlinx.android.synthetic.main.fragment_banner.view.srl_book
 import kotlinx.android.synthetic.main.header_wan_android.view.*
 import org.simple.eventbus.Subscriber
 import timber.log.Timber

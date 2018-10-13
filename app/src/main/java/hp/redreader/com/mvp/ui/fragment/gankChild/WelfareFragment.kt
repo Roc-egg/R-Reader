@@ -18,8 +18,10 @@ import hp.redreader.com.mvp.contract.WelfareContract
 import hp.redreader.com.mvp.presenter.WelfarePresenter
 
 import hp.redreader.com.R
+import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.mvp.ui.activity.movie.ViewBigImageActivity
 import hp.redreader.com.mvp.ui.adapter.WelfareAdapter
+import kotlinx.android.synthetic.main.fragment_welfare.view.*
 import timber.log.Timber
 import javax.inject.Inject
 

@@ -23,6 +23,8 @@ import hp.redreader.com.app.utils.showImgBg
 import hp.redreader.com.mvp.model.entity.book.BookBean
 import hp.redreader.com.mvp.model.entity.book.BookDetailBean
 import hp.redreader.com.mvp.ui.activity.webview.WebViewActivity
+import kotlinx.android.synthetic.main.activity_book_detail.view.*
+import kotlinx.android.synthetic.main.header_book_detail.view.*
 
 
 /**

@@ -18,9 +18,11 @@ import hp.redreader.com.mvp.contract.AndroidContract
 import hp.redreader.com.mvp.presenter.AndroidPresenter
 
 import hp.redreader.com.R
+import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.mvp.model.entity.gank.GankIoDataBean
 import hp.redreader.com.mvp.ui.activity.webview.WebViewActivity
 import hp.redreader.com.mvp.ui.adapter.GankAndroidAdapter
+import kotlinx.android.synthetic.main.fragment_android.view.*
 import javax.inject.Inject
 
 

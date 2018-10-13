@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.widget.LinearLayoutManager
+import android.view.ViewGroup
 import android.widget.ImageView
+import com.chad.library.adapter.base.BaseQuickAdapter
 
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.utils.ArmsUtils
@@ -26,6 +28,8 @@ import hp.redreader.com.mvp.model.entity.movie.PersonBean
 import hp.redreader.com.mvp.model.entity.movie.SubjectsBean
 import hp.redreader.com.mvp.ui.activity.webview.WebViewActivity
 import hp.redreader.com.mvp.ui.adapter.MovieDetailAdapter
+import kotlinx.android.synthetic.main.activity_one_movie_detail.view.*
+import kotlinx.android.synthetic.main.header_slide_shape.view.*
 import javax.inject.Inject
 
 

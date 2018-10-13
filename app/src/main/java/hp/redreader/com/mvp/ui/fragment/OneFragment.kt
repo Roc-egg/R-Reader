@@ -1,6 +1,7 @@
 package hp.redreader.com.mvp.ui.fragment
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -18,10 +19,12 @@ import hp.redreader.com.mvp.contract.OneContract
 import hp.redreader.com.mvp.presenter.OnePresenter
 
 import hp.redreader.com.R
+import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.app.utils.displayRandom
 import hp.redreader.com.mvp.model.api.ConstantsImageUrl
 import hp.redreader.com.mvp.ui.activity.movie.DoubanTopActivity
 import hp.redreader.com.mvp.ui.adapter.OneAdapter
+import kotlinx.android.synthetic.main.fragment_one.view.*
 import kotlinx.android.synthetic.main.header_item_one.view.*
 import me.jessyan.mvparms.demo.app.onClick
 import javax.inject.Inject

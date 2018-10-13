@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ import android.view.animation.LinearInterpolator
 import android.view.animation.RotateAnimation
 import android.widget.ImageView
 import com.blankj.utilcode.util.SPUtils
+import com.bumptech.glide.Glide
 
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.utils.ArmsUtils
@@ -26,12 +28,14 @@ import hp.redreader.com.mvp.contract.EverydayContract
 import hp.redreader.com.mvp.presenter.EverydayPresenter
 
 import hp.redreader.com.R
+import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.app.utils.PerfectClickListener
 import hp.redreader.com.app.utils.displayRandom
 import hp.redreader.com.mvp.model.entity.gank.AndroidBean
 import hp.redreader.com.mvp.model.entity.gank.FrontpageBean
 import hp.redreader.com.mvp.ui.activity.webview.WebViewActivity
 import hp.redreader.com.mvp.ui.adapter.EverydayAdapter
+import kotlinx.android.synthetic.main.fragment_everyday.view.*
 import kotlinx.android.synthetic.main.header_item_everyday.view.*
 import kotlinx.android.synthetic.main.home_middle_layout.view.*
 import me.jessyan.mvparms.demo.app.getData

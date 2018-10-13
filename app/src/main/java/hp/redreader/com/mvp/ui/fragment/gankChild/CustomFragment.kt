@@ -21,10 +21,12 @@ import hp.redreader.com.mvp.contract.CustomContract
 import hp.redreader.com.mvp.presenter.CustomPresenter
 
 import hp.redreader.com.R
+import hp.redreader.com.app.base.MyBaseFragment
 import hp.redreader.com.mvp.model.api.Constants.GANK_CALA
 import hp.redreader.com.mvp.model.entity.gank.GankIoDataBean
 import hp.redreader.com.mvp.ui.activity.webview.WebViewActivity
 import hp.redreader.com.mvp.ui.adapter.GankAndroidAdapter
+import kotlinx.android.synthetic.main.fragment_custom.view.*
 import org.simple.eventbus.Subscriber
 import timber.log.Timber
 import javax.inject.Inject

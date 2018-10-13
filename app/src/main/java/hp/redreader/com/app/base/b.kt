@@ -52,7 +52,7 @@ import timber.log.Timber
 import com.jess.arms.utils.ThirdViewUtil.convertAutoView
 
 /**
- * 两个没用的文件为了github上面显示一下kotlin
+ * 两个没用的文件为了github上面显示一下kotlin ☺
  */
 abstract class b<P : IPresenter> : AppCompatActivity(), IActivity, ActivityLifecycleable {
     protected val TAG = this.javaClass.simpleName

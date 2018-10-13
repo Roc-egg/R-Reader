@@ -17,7 +17,7 @@ import hp.redreader.com.greendao.UserDao;
 /**
  * {@inheritDoc}
  * 
- * @see AbstractDaoSession
+ * @see org.greenrobot.greendao.AbstractDaoSession
  */
 public class DaoSession extends AbstractDaoSession {
 
