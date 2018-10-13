@@ -1,5 +1,7 @@
 package hp.redreader.com;
 
+import android.support.v7.app.AppCompatActivity;
+
 /**
  * 类名：    R-Reader
  * 类描述：
@@ -9,5 +11,5 @@ package hp.redreader.com;
  * 修改时间：2018/10/14/014 2:34
  * 修改备注：
  */
-public class a {
+public class a extends AppCompatActivity {
 }
