@@ -1,6 +1,9 @@
 package hp.redreader.com.mvp.ui.activity
 
+import android.os.Bundle
+import android.os.PersistableBundle
 import hp.redreader.com.app.base.BaseHeadeActivity
+import timber.log.Timber
 
 /**
  * 类名：    R-Reader
@@ -12,4 +15,8 @@ import hp.redreader.com.app.base.BaseHeadeActivity
  * 修改备注：
  */
 class TestActivity : BaseHeadeActivity() {
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
+        Timber.e("测试")
+    }
 }
