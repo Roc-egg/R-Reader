@@ -170,7 +170,7 @@ public class XRecyclerView extends RecyclerView {
                     && lastVisibleItemPosition >= layoutManager.getItemCount() - 1
                     && layoutManager.getItemCount() > layoutManager.getChildCount()
                     && !isnomore
-                    && mRefreshHeader.getState() < YunRefreshHeader.STATE_REFRESHING) {
+                    && mRefreshHeader.getState() < YunRefreshHeader.Companion.getSTATE_REFRESHING()) {
 
                 View footView = mFootViews.get(0);
                 isLoadingData = true;
@@ -209,7 +209,7 @@ public class XRecyclerView extends RecyclerView {
                 mLastY = ev.getRawY();
                 if (isOnTop() && pullRefreshEnabled) {
                     mRefreshHeader.onMove(deltaY / DRAG_RATE);
-                    if (mRefreshHeader.getVisiableHeight() > 0 && mRefreshHeader.getState() < YunRefreshHeader.STATE_REFRESHING) {
+                    if (mRefreshHeader.getVisiableHeight() > 0 && mRefreshHeader.getState() < YunRefreshHeader.Companion.getSTATE_REFRESHING()) {
                         return false;
                     }
                 }

@@ -19,7 +19,7 @@ public class YunRefreshHeader extends LinearLayout implements BaseRefreshHeader 
     private Context mContext;
     private AnimationDrawable animationDrawable;
     private TextView msg;
-    private int mState = STATE_NORMAL;
+    private int mState = Companion.getSTATE_NORMAL();
     private int mMeasuredHeight;
     private LinearLayout mContainer;
 
@@ -59,11 +59,11 @@ public class YunRefreshHeader extends LinearLayout implements BaseRefreshHeader 
     public void onMove(float delta) {
         if (getVisiableHeight() > 0 || delta > 0) {
             setVisiableHeight((int) delta + getVisiableHeight());
-            if (mState <= STATE_RELEASE_TO_REFRESH) { // 未处于刷新状态，更新箭头
+            if (mState <= Companion.getSTATE_RELEASE_TO_REFRESH()) { // 未处于刷新状态，更新箭头
                 if (getVisiableHeight() > mMeasuredHeight) {
-                    setState(STATE_RELEASE_TO_REFRESH);
+                    setState(Companion.getSTATE_RELEASE_TO_REFRESH());
                 } else {
-                    setState(STATE_NORMAL);
+                    setState(Companion.getSTATE_NORMAL());
                 }
             }
         }
@@ -72,24 +72,24 @@ public class YunRefreshHeader extends LinearLayout implements BaseRefreshHeader 
     private void setState(int state) {
         if (state == mState) return;
         switch (state) {
-            case STATE_NORMAL:
+            case Companion.getSTATE_NORMAL():
                 if (animationDrawable.isRunning()) {
                     animationDrawable.stop();
                 }
                 msg.setText(R.string.listview_header_hint_normal);
                 break;
-            case STATE_RELEASE_TO_REFRESH:
-                if (mState != STATE_RELEASE_TO_REFRESH) {
+            case Companion.getSTATE_RELEASE_TO_REFRESH():
+                if (mState != Companion.getSTATE_RELEASE_TO_REFRESH()) {
                     if (!animationDrawable.isRunning()) {
                         animationDrawable.start();
                     }
                     msg.setText(R.string.listview_header_hint_release);
                 }
                 break;
-            case STATE_REFRESHING:
+            case Companion.getSTATE_REFRESHING():
                 msg.setText(R.string.refreshing);
                 break;
-            case STATE_DONE:
+            case Companion.getSTATE_DONE():
                 msg.setText(R.string.refresh_done);
                 break;
             default:
@@ -104,17 +104,17 @@ public class YunRefreshHeader extends LinearLayout implements BaseRefreshHeader 
         if (height == 0) // not visible.
             isOnRefresh = false;
 
-        if (getVisiableHeight() > mMeasuredHeight && mState < STATE_REFRESHING) {
-            setState(STATE_REFRESHING);
+        if (getVisiableHeight() > mMeasuredHeight && mState < Companion.getSTATE_REFRESHING()) {
+            setState(Companion.getSTATE_REFRESHING());
             isOnRefresh = true;
         }
         // refreshing and header isn't shown fully. do nothing.
-        if (mState == STATE_REFRESHING && height <= mMeasuredHeight) {
+        if (mState == Companion.getSTATE_REFRESHING() && height <= mMeasuredHeight) {
             //return;
         }
         int destHeight = 0; // default: scroll back to dismiss header.
         // is refreshing, just scroll back to show all the header.
-        if (mState == STATE_REFRESHING) {
+        if (mState == Companion.getSTATE_REFRESHING()) {
             destHeight = mMeasuredHeight;
         }
         smoothScrollTo(destHeight);
@@ -124,7 +124,7 @@ public class YunRefreshHeader extends LinearLayout implements BaseRefreshHeader 
 
     @Override
     public void refreshComplate() {
-        setState(STATE_DONE);
+        setState(Companion.getSTATE_DONE());
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 reset();
@@ -134,7 +134,7 @@ public class YunRefreshHeader extends LinearLayout implements BaseRefreshHeader 
 
     public void reset() {
         smoothScrollTo(0);
-        setState(STATE_NORMAL);
+        setState(Companion.getSTATE_NORMAL());
     }
 
     private void smoothScrollTo(int destHeight) {
