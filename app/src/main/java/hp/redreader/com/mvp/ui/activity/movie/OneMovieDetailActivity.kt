@@ -19,7 +19,7 @@ import hp.redreader.com.mvp.contract.OneMovieDetailContract
 import hp.redreader.com.mvp.presenter.OneMovieDetailPresenter
 
 import hp.redreader.com.R
-import hp.redreader.com.app.base.BaseHeaderActivity
+import hp.redreader.com.app.base.MyBaseHeaderActivity
 import hp.redreader.com.app.utils.StringFormatUtil
 import hp.redreader.com.app.utils.showBookImg
 import hp.redreader.com.app.utils.showImgBg
@@ -42,7 +42,7 @@ import javax.inject.Inject
  * 修改时间：2018/9/26/026 0:46
  * 修改备注：
  */
-class OneMovieDetailActivity : BaseHeaderActivity<OneMovieDetailPresenter>(), OneMovieDetailContract.View {
+class OneMovieDetailActivity : MyBaseHeaderActivity<OneMovieDetailPresenter>(), OneMovieDetailContract.View {
     @Inject
     lateinit var mAdapter: MovieDetailAdapter
     @Inject
