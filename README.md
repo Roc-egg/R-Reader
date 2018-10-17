@@ -20,6 +20,7 @@ UI和接口来自于[云阅](https://github.com/youlookwhat/CloudReader)
 
 
 ### Download
-　[二维码下载](https://github.com/Roc-egg/R-Reader/blob/master/file/ewm.png)
+　二维码下载
+<img width="260" height=“260” src="https://github.com/Roc-egg/R-Reader/blob/master/file/ewm.png"></img>
 
 　[下载apk](https://github.com/Roc-egg/R-Reader/raw/master/file/app-debug.apk)
