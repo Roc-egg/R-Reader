@@ -25,6 +25,8 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
         testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+
+        multiDexEnabled true // Enable MultiDex.
     }
     buildTypes {
         debug {
@@ -64,9 +66,7 @@ dependencies {
     implementation project(path: ':xrecyclerview')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //support
-    implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["support-v4"]
-    implementation rootProject.ext.dependencies["recyclerview-v7"]
     implementation rootProject.ext.dependencies["design"]
     implementation(rootProject.ext.dependencies["cardview-v7"]) {
         exclude module: 'support-annotations'
@@ -111,4 +111,6 @@ dependencies {
     implementation rootProject.ext.dependencies["PhotoView"]
     //BottomSheet
     implementation rootProject.ext.dependencies["BottomSheet"]
+    //multidex
+    implementation rootProject.ext.dependencies["multidex"]
 }
