@@ -8,11 +8,11 @@ UI和接口来自于[云阅](https://github.com/youlookwhat/CloudReader)
 
 ## 截图
 
-<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/1.png"></img>
-<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/2.png"></img>
-<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/3.png"></img>
-<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/4.png"></img>
-<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/5.png"></img>
+<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/1.jpg"></img>
+<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/2.jpg"></img>
+<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/3.jpg"></img>
+<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/4.jpg"></img>
+<img width="173" height=“274” src="https://github.com/Roc-egg/R-Reader/blob/master/file/5.jpg"></img>
 
 #### Gif Preview
 
@@ -20,4 +20,6 @@ UI和接口来自于[云阅](https://github.com/youlookwhat/CloudReader)
 
 
 ### Download
-　[下载地址](https://github.com/Roc-egg/R-Reader/blob/master/file/app-debug.apk)
+　[二维码下载](https://github.com/Roc-egg/R-Reader/blob/master/file/ewm.png)
+
+　[下载apk](https://github.com/Roc-egg/R-Reader/raw/master/file/app-debug.apk)
